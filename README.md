@@ -51,20 +51,25 @@ Looking ahead, the project's roadmap incorporates augmented reality and drones t
 
 ## System Architecture
 
-```
-┌─────────────────┐     ┌───────────────────┐     ┌─────────────────────┐
-│ Edge Detection  │────▶│ Central Processing │────▶│ Enforcement Actions │
-│ & Preprocessing │     │ & Decision Making  │     │ & Data Management   │
-└─────────────────┘     └───────────────────┘     └─────────────────────┘
-       │                         │                          │
-       ▼                         ▼                          ▼
-┌─────────────────┐     ┌───────────────────┐     ┌─────────────────────┐
-│ YOLOv5 Models   │     │ Traffic Analytics │     │ Blockchain Ledger   │
-│ - Vehicle       │     │ - Flow Patterns   │     │ - Violation Records │
-│ - Rider         │     │ - Violation Zones │     │ - Payment Tracking  │
-│ - Helmet        │     │ - Peak Hours      │     │ - Audit Trail       │
-│ - License Plate │     │ - Weather Impact  │     │ - Smart Contracts   │
-└─────────────────┘     └───────────────────┘     └─────────────────────┘
+```mermaid
+graph TD
+    A[Edge Detection & Preprocessing] --> B[Central Processing & Decision Making]
+    B --> C[Enforcement Actions & Data Management]
+    A --> D[YOLOv5 Models]
+    B --> E[Traffic Analytics]
+    C --> F[Blockchain Ledger]
+    D --> |Vehicle Detection| B
+    D --> |Rider Detection| B
+    D --> |Helmet Detection| B
+    D --> |License Plate Detection| B
+    E --> |Flow Patterns| C
+    E --> |Violation Zones| C
+    E --> |Peak Hours| C
+    E --> |Weather Impact| C
+    F --> |Violation Records| C
+    F --> |Payment Tracking| C
+    F --> |Audit Trail| C
+    F --> |Smart Contracts| C
 ```
 
 ## Key Features
@@ -223,8 +228,3 @@ We welcome contributions to improve SmartTraffic AI:
 ## License
 
 This project is licensed under the Indian Copyright Act of 1957. All rights reserved.
-#   a i _ t r a f f i c _ s y s t e m  
- #   s m a r t t r a f f i c - a i  
- #   s a s a  
- #   s a s a  
- 
